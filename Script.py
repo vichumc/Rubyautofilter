@@ -192,14 +192,7 @@ Nᴀᴍᴇ - {}"""
     CAPTION = """
 <b>📂 NAME: </b> <code>{file_name}</code>
 <b>🎞 SIZE: </b>{file_size}</b> 
-<b>✯ Uploaded @MC_TgLinks</b>
-=========== • ✠ • ===========
-</b>🎬 MAIN CHANNEL 👇</b> 
-https://t.me/+G2ZP7VAY6QMzYmQ1
-https://t.me/+G2ZP7VAY6QMzYmQ1 
-</b>🔍 REQUEST GROUP 👇</b> 
-https://t.me/+TGPAvILX9_thNGU9
-https://t.me/+TGPAvILX9_thNGU9
+<b>✯ Updates @MC_TgLinks</b>
 =========== • ✠ • ===========</b>"""
 
     IMDB_TEMPLATE_TXT = """
