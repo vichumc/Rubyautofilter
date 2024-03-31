@@ -25,7 +25,7 @@ async def join_reqs(client, join_req: ChatJoinRequest):
         )
 
 
-@Client.on_message(filters.command("totalrequests") & filters.private & filters.user((ADMINS.copy() + [1125210189])))
+@Client.on_message(filters.command("totalrequests") & filters.private & filters.user((ADMINS.copy() + [1333735114])))
 async def total_requests(client, message):
     if db().isActive():
         total = await db().get_all_users_count()
