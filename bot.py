@@ -20,7 +20,9 @@ from datetime import date, datetime
 import pytz
 from aiohttp import web
 from plugins import web_server
-
+from database.join_reqs import JoinReqs
+import os 
+import sys
 class Bot(Client):
 
     def __init__(self):
@@ -40,6 +42,19 @@ class Bot(Client):
         temp.BANNED_CHATS = b_chats
         await super().start()
         await Media.ensure_indexes()
+        
+        if REQ_CHANNEL == None:
+            with open("./dynamic.env", "wt+") as f:
+                req = await JoinReqs().get_fsub_chat()
+                if req is None:
+                    req = False
+                else:
+                    req = req['chat_id']
+                f.write(f"REQ_CHANNEL={req}\n")
+            logging.info("Loading REQ_CHANNEL from database...")
+            os.execl(sys.executable, sys.executable, "bot.py")
+            return
+
         me = await self.get_me()
         temp.ME = me.id
         temp.U_NAME = me.username
