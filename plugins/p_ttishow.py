@@ -64,7 +64,7 @@ async def save_group(bot, message):
                                                                            InlineKeyboardButton('📝 Request Group 📝', url=GRP_LNK),
                                                                            InlineKeyboardButton('✔ Main Channel ✔', url=CHNL_LNK)
                                                                         ],[
-                                                                           InlineKeyboardButton("🐱‍🏍 Bot Onwer 🐱‍🏍", url="t.me/TgxKiller")
+                                                                           InlineKeyboardButton("✌️ Bot Onwer ✌️", url="t.me/TgxKiller")
                                                                          ]]
                                                  ),
                                                  parse_mode=enums.ParseMode.HTML
