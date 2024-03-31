@@ -68,12 +68,10 @@ async def add_fsub_chats(bot: Client, update: Message):
 
 @Client.on_message(filters.command("delchat") & filters.user(ADMINS) & filters.private)
 async def clear_fsub_chats(bot: Client, update: Message):
-
     await db().delete_fsub_chat(chat_id=(await db().get_fsub_chat())['chat_id'])
     await update.reply_text(text="Deleted fsub chat from the database.", quote=True)
     with open("./dynamic.env", "wt+") as f:
         f.write(f"REQ_CHANNEL=False\n")
-
     logger.info("Restarting to update REQ_CHANNEL from database...")
     await update.reply_text("Restarting...", quote=True)
     os.execl(sys.executable, sys.executable, "bot.py")
@@ -81,7 +79,6 @@ async def clear_fsub_chats(bot: Client, update: Message):
 
 @Client.on_message(filters.command("viewchat") & filters.user(ADMINS) & filters.private)
 async def get_fsub_chat(bot: Client, update: Message):
-
     chat = await db().get_fsub_chat()
     if not chat:
         await update.reply_text("No fsub chat found in the database.", quote=True)
