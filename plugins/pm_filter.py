@@ -696,13 +696,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                     return
                 else:
-                    await query.answer(f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !", show_alert=True)
+                    await query.answer(f"Hᴇʏ {query.from_user.first_name}, 🎯 Type Movie/Series Name on your Own 🎯", show_alert=True)
             elif settings['botpm']:
                 if clicked == typed:
                     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                     return
                 else:
-                    await query.answer(f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !", show_alert=True)
+                    await query.answer(f"Hᴇʏ {query.from_user.first_name}, 🎯 Type Movie/Series Name on your Own 🎯 !", show_alert=True)
             else:
                 if clicked == typed:
                     if IS_VERIFY and not await check_verification(client, query.from_user.id):
