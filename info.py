@@ -48,7 +48,8 @@ auth_channel = environ.get('AUTH_CHANNEL',)
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 REQ_CHANNEL = environ.get("REQ_CHANNEL", None)
 REQ_CHANNEL = (int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False) if REQ_CHANNEL is not None else None
-JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
+DATABASE_URI2 = environ.get('DATABASE_URI2', "")
+JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI2)
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
