@@ -52,8 +52,8 @@ DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Zerausers:Zerausers@
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI2)
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Rajappan")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Ruby2024:Ruby2024@cluster0.66toy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
