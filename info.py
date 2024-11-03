@@ -48,7 +48,7 @@ auth_channel = environ.get('AUTH_CHANNEL',)
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 REQ_CHANNEL = environ.get("REQ_CHANNEL", True)
 REQ_CHANNEL = (int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False) if REQ_CHANNEL is not None else None
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Zerausers:Zerausers@cluster0.2spdf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Zerausersdb1:Zerausersdb1@cluster0.pm7jo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI2)
 
 # MongoDB information
